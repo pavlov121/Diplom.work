@@ -1,6 +1,15 @@
 from django.db import models
 
 
+class Main2(models.Model):
+    title = models.CharField(max_length=200)
+    title2 = models.CharField(max_length=200)
+    body = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.title
+
+
 class Main(models.Model):
     title = models.CharField(max_length=200)  # Название Соревнования
     description = models.TextField(blank=True)  # Описание
