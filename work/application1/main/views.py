@@ -21,3 +21,7 @@ def main(request):
 
 def contact_user(request):
     return render(request, "main/contact.html")
+
+
+def company(request):
+    return render(request, "main/company.html")
