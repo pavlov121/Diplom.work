@@ -1,12 +1,21 @@
 from django.shortcuts import render
-from .models import Main2
+from .models import Main2, Main, City, Company, Room
 
 
 def main(request):
-    mn = Main2.objects.all()
+    # mn = Main2.objects.all()
+    # mn2 = Main.objects.all()
+    # context = {
+    #     'main': mn,
+    #     'main2': mn2
+    # }
+    rm = Room.objects.all()
+    cm = Company.objects.all()
     context = {
-        'main': mn
+        'rooms': rm,
+        'company': cm
     }
+
     return render(request, "main/main.html", context)
 
 
