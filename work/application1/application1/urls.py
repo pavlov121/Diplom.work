@@ -23,6 +23,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include('main.urls')),  # подключение main\urls.py
     path("contact/", contact_user, name="contact"),  # подключение contact
-    path("company/", company, name="company"),  # подключение proper
-    path("about/", about, name="about")  # подключение proper
+    path("company/", company, name="company"),  # подключение компании
+    path("about/", about, name="about")  # подключение about
 ]
