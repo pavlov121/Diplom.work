@@ -24,4 +24,12 @@ def contact_user(request):
 
 
 def company(request):
-    return render(request, "main/company.html")
+    cm = Company.objects.all()
+    context = {
+        'company': cm
+    }
+    return render(request, "main/company.html", context)
+
+
+def about(request):
+    return render(request, "main/property-details.html")

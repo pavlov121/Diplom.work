@@ -17,11 +17,12 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from main.views import contact_user, company
+from main.views import contact_user, company, about
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include('main.urls')),  # подключение main\urls.py
     path("contact/", contact_user, name="contact"),  # подключение contact
-    path("company/", company, name="company")  # подключение proper
+    path("company/", company, name="company"),  # подключение proper
+    path("about/", about, name="about")  # подключение proper
 ]

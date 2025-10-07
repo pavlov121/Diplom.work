@@ -36,10 +36,10 @@ class Room(models.Model):
     title = models.CharField(max_length=200)  # Для определения
     address = models.CharField(max_length=200)  # Адрес
     money = models.CharField(max_length=200)  # Стоимость
-    Bedrooms = models.IntegerField(default=0)    # Спальная комната
-    Bathrooms = models.IntegerField(default=0)   # Ванная комната
+    Bedrooms = models.IntegerField(default=0)  # Спальная комната
+    Bathrooms = models.IntegerField(default=0)  # Ванная комната
     Area = models.CharField(max_length=200)  # Площадь
-    Floor = models.IntegerField(default=0)    # Этаж
+    Floor = models.IntegerField(default=0)  # Этаж
     Parking = models.CharField(max_length=200)  # Парковка
     image = models.ImageField(upload_to="main/%Y/%m/%d/", blank=True,
                               default="run.jpg")  # Изображение (создание папки с датой создания)
@@ -58,5 +58,11 @@ class Company(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Eco(models.Model):
+    image2 = models.ImageField(upload_to="main/%Y/%m/%d/", blank=True,
+                               default="run.jpg")
+    category = models.CharField(max_length=200)
 
 
