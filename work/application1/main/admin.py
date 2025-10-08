@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Main2, Main, City, Room, Company
+from .models import Room, Company
 
 # admin.site.register(Main2)  # отображение в админ панели
 # admin.site.register(Main)

@@ -354,7 +354,10 @@
             <div class="col-lg-4 col-md-6">
                 <div class="item">
                     <a href="property-details.html"><img src="{{ room.image.url }}" alt=""></a>
-                    <span class="category">Квартиры</span>
+                    {% for comp in room.Company.all %}
+                    <span class="category">{{ comp }}</span>
+                    {% endfor %}
+
                     <h6>{{ room.money }}</h6>
                     <h4><a href="property-details.html">{{ room.address }}</a></h4>
                     <ul>
@@ -365,7 +368,7 @@
                         <li>Parking: <span>{{ room.Parking }}</span></li>
                     </ul>
                     <div class="main-button">
-                        <a href="property-details.html">Подробнее</a>
+                        <a href="{% url 'company' room.id%}">Подробнее</a>
                     </div>
                 </div>
             </div>
