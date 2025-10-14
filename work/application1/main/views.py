@@ -1,17 +1,14 @@
 from django.shortcuts import render
 from .models import Company, Room
+from cms.models import CmsSlider
 
 
 def main(request):
-    # mn = Main2.objects.all()
-    # mn2 = Main.objects.all()
-    # context = {
-    #     'main': mn,
-    #     'main2': mn2
-    # }
+    slider_list = CmsSlider.objects.all()
     rm = Room.objects.all()  # получаем все данные
     context = {
         'rooms': rm,
+        'slider_list': slider_list
     }
 
     return render(request, "main/main.html", context)

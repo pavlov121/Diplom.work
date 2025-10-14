@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "main.apps.MainConfig",  # регистрация приложения main
+    "cms.apps.CmsConfig",  # регистрация слайдера cms
 ]
 
 MIDDLEWARE = [
