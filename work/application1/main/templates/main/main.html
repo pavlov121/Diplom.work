@@ -345,7 +345,7 @@
         <div class="row">
             <div class="col-lg-4 offset-lg-4">
                 <div class="section-heading text-center">
-                    <h6>Квартиры в Москве: </h6>
+                    <h6>Аренда квартир и комнат: </h6>
                 </div>
             </div>
         </div>
@@ -353,22 +353,20 @@
             {% for room in rooms %}
             <div class="col-lg-4 col-md-6">
                 <div class="item">
-                    <a href="property-details.html"><img src="{{ room.image.url }}" alt=""></a>
+                    <a href="property-details.html"><img src="{{ room.image.url }}"  style="width: 400px; height: 300px; display: block; cover: contain" alt=""></a>
                     {% for comp in room.Company.all %}
                     <span class="category">{{ comp }}</span>
                     {% endfor %}
 
-                    <h6>{{ room.money }}</h6>
-                    <h4><a href="property-details.html">{{ room.address }}</a></h4>
+                    <h6>{{ room.price }} ₽/мес.</h6>
+                    <h4><a href="property-details.html">{{ room.short_description }}</a></h4>
                     <ul>
-                        <li>Bedrooms: <span>{{ room.Bedrooms }}</span></li>
-                        <li>Bathrooms: <span>{{ room.Bathrooms }}</span></li>
-                        <li>Area: <span>{{ room.Area }}</span></li>
-                        <li>Floor: <span>{{ room.Floor }}</span></li>
-                        <li>Parking: <span>{{ room.Parking }}</span></li>
+                        <li>Площадь: <span>{{ room.Area }}</span></li>
+                        <li>Этаж: <span>{{ room.Floor }}</span></li>
+                        <li>Год постройки: <span>{{ room.year }}</span></li>
                     </ul>
                     <div class="main-button">
-                        <a href="{% url 'company' room.id%}">Подробнее</a>
+                        <a href="{% url 'company' room.id %}">Подробнее</a>
                     </div>
                 </div>
             </div>
