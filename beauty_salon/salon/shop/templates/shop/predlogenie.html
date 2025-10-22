@@ -1,0 +1,30 @@
+<!-- what we do  -->
+<div class="we_do slin">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Art Beauty – это полный спектр услуг индустрии красоты. Мы предлагаем:</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1 col-md-12">
+                <div class="row">
+                    {% for predl in predlogen %}
+                    <div class="col-md-3 col-sm-6">
+                        <div class="we_box">
+                            <i><img src="{{ predl.cms_img.url }}" alt="#"/></i>
+                            <h3>{{ predl.cms_title }}</h3>
+                            <p>{{ predl.cms_text }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end what we do  -->
