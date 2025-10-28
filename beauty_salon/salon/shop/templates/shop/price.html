@@ -1,0 +1,29 @@
+<div class="pricing slin">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Наши цены</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for price in prices %}
+            <div class="col-md-4">
+                <div class="pricing_box">
+                    <div class="pricing_box_ti">
+                        <img src="{{ price.price_img.url }}" alt="">
+                        <h3><span>&#8381</span>{{ price.price }}<strong>/one Day</strong></h3>
+                    </div>
+                    <div class="our_pricing">
+                        <span>{{ price.price_title }}</span>
+                        <p>{{ price.price_text }}</p>
+                    </div>
+                </div>
+                <a class="read_more mar_top" href="Javascript:void(0)"> Записаться сейчас!</a>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>

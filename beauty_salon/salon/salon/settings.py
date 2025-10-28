@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "shop.apps.ShopConfig",  # Главная страница
     "carousel.apps.CarouselConfig",  # Баннер
     "predlogenie.apps.PrednisoloneConfig",  # Предложения
+    "price.apps.PriceConfig",  # Стоимость услуг
 ]
 
 MIDDLEWARE = [
