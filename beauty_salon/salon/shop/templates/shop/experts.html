@@ -1,0 +1,35 @@
+<!-- experts -->
+<div class="experts slin2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Наши мастера</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-md-12">
+                <div class="row">
+                    {% for expert in experts %}
+                    <div class="col-md-4">
+                        <div id="exp" class="experts_box">
+                            <div class="experts_img">
+                                <figure><img src="{{ expert.exp_img.url }}" alt="#"/></figure>
+                            </div>
+                            <div class="meet">
+                                <h3>{{ expert.exp_title }}</h3>
+                                <p>{{ expert.exp_text }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="col-md-12">
+                        <a class="read_more mar_top exper" href="Javascript:void(0)"> Читать больше</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end experts -->

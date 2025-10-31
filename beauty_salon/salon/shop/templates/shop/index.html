@@ -17,60 +17,8 @@
 {% include 'shop/price.html' %}
 <!-- end our pricing -->
 <!-- experts -->
-<div class="experts slin2">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="titlepage">
-                    <h2>Meet Our Experts</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2 col-md-12">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div id="exp" class="experts_box">
-                            <div class="experts_img">
-                                <figure><img src="images/blog1.jpg" alt="#"/></figure>
-                            </div>
-                            <div class="meet">
-                                <h3>Jacob</h3>
-                                <p>Lorem ipsum dolor sit amet, iscing elit, sed do magna </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div id="exp" class="experts_box">
-                            <div class="experts_img">
-                                <figure><img src="images/blog2.jpg" alt="#"/></figure>
-                            </div>
-                            <div class="meet">
-                                <h3>Lonut</h3>
-                                <p>Lorem ipsum dolor sit amet, iscing elit, sed do magna</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div id="exp" class="experts_box">
-                            <div class="experts_img">
-                                <figure><img src="images/blog3.jpg" alt="#"/></figure>
-                            </div>
-                            <div class="meet">
-                                <h3>Irina</h3>
-                                <p>Lorem ipsum dolor sit amet, iscing elit, sed do magna</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <a class="read_more mar_top exper" href="Javascript:void(0)"> Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end experts -->
+{% include 'shop/experts.html' %}
+<!-- end experts -->>
 <!--  contact -->
 <div class="contact">
     <div class="container">
@@ -106,19 +54,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="map_main">
-                    <div class="map-responsive">
-                        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France"
-                                width="600" height="386" frameborder="0" style="border:0; width: 100%;"
-                                allowfullscreen=""></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include 'shop/geo.html' %}
 </div>
 <!-- end contact -->
 <!--  footer -->
@@ -146,11 +82,11 @@
                 <div class="col-md-2 col-sm-6">
                     <h3>Useful Link</h3>
                     <ul class="link_menu">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="about.html"> About</a></li>
-                        <li><a href="we-do.html">What we do</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li class="active"><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="we-do.html">Работы</a></li>
+                        <li><a href="pricing.html">Услуги</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 col-sm-6">

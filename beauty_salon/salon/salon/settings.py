@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     "carousel.apps.CarouselConfig",  # Баннер
     "predlogenie.apps.PrednisoloneConfig",  # Предложения
     "price.apps.PriceConfig",  # Стоимость услуг
+    "django.contrib.humanize",   # Для отображения цены услуги
+    "experts.apps.ExpertsConfig",  # Мастера
 ]
 
 MIDDLEWARE = [

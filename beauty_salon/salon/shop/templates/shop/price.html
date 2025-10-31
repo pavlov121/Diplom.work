@@ -1,3 +1,4 @@
+{% load humanize %}
 <div class="pricing slin">
     <div class="container">
         <div class="row">
@@ -13,7 +14,7 @@
                 <div class="pricing_box">
                     <div class="pricing_box_ti">
                         <img src="{{ price.price_img.url }}" alt="">
-                        <h3><span>&#8381</span>{{ price.price }}<strong>/one Day</strong></h3>
+                        <h3><span>&#8381</span>{{ price.price|intcomma }}<strong>руб.</strong></h3>
                     </div>
                     <div class="our_pricing">
                         <span>{{ price.price_title }}</span>
