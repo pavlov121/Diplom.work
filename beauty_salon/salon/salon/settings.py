@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "price.apps.PriceConfig",  # Стоимость услуг
     "django.contrib.humanize",   # Для отображения цены услуги
     "experts.apps.ExpertsConfig",  # Мастера
+    "crm.apps.CrmConfig",  # Для Формы(Телеграм Бот)
 ]
 
 MIDDLEWARE = [
