@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.humanize",   # Для отображения цены услуги
     "experts.apps.ExpertsConfig",  # Мастера
     "crm.apps.CrmConfig",  # Для Формы(Телеграм Бот)
+    "telebot.apps.TelebotConfig",  # Телеграмм-Бот
 ]
 
 MIDDLEWARE = [

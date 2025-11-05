@@ -5,6 +5,7 @@ from price.models import Price
 from experts.models import Experts
 from crm.models import Site
 from crm.forms import SiteForm
+from telebot.sendmessage import send_telegram
 
 
 def index(request):
@@ -32,6 +33,7 @@ def thanks_page(request):
         message = request.POST['message']
         element = Site(site_name=name, site_email=email, site_phone=phone, site_message=message)
         element.save()
+        send_telegram(tg_name=name, tg_message=message)
         return render(request, 'shop/thanks.html')
     else:
         return render(request, 'shop/thanks.html')

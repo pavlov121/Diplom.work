@@ -33,6 +33,14 @@
      box-sizing: border-box !important;
 }
 
+.thanks{
+    font-size: 40px;
+    background-image: url('images/salon!.jpg');
+}
+
+.thanks h1{
+    font-size: 50px;
+}
 .container {
      max-width: 1170px;
 }
