@@ -23,6 +23,7 @@ from django.conf import settings  # settings.MEDIA_URL и settings.MEDIA_ROOT
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include('shop.urls')),  # Подключение urls из shop
+    path("about/", include('about.urls')),  # Подключение urls из about
 ]
 
 if settings.DEBUG:
