@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     "crm.apps.CrmConfig",  # Для Формы(Телеграм Бот)
     "telebot.apps.TelebotConfig",  # Телеграмм-Бот
     "about.apps.AboutConfig",  # Страница (О нас)
+    "we_done.apps.WeDoneConfig",  # Страница (Работы)
+    "price_site.apps.PriceSiteConfig",  # Страница (Цены)
 ]
 
 MIDDLEWARE = [

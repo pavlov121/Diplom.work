@@ -24,6 +24,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include('shop.urls')),  # Подключение urls из shop
     path("about/", include('about.urls')),  # Подключение urls из about
+    path("we_done/", include('we_done.urls')),  # Подключение urls из we_done
+    path("price_cena/", include('price_site.urls')),  # Подключение urls из price_cena
 ]
 
 if settings.DEBUG:

@@ -23,17 +23,17 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                             <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
+                                <li class="nav-item">
                                     <a class="nav-link" href="{% url 'index' %}">Главная</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{% url 'about' %}">О нас</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="we-do.html">Работы</a>
+                                    <a class="nav-link" href="{% url 'we_done' %}">Работы</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="pricing.html">Цены</a>
+                                    <a class="nav-link" href="{% url 'price_cena' %}">Цены</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="contact.html">Контакты</a>
