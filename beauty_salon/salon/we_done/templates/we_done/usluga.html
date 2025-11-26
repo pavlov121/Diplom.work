@@ -1,0 +1,31 @@
+{% extends 'we_done/base.html' %}
+<!-- end loader -->
+<!-- header -->
+{% block content %}
+{% load static %}
+
+{% include 'we_done/navbar.html' %}
+
+<div class="back_re">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="title">
+                     <h2><i>{{ usluga.category }}</i></h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+</div>
+<div>
+    {% include 'we_done/category.html' %}
+</div>
+<div>
+    <i><img src="{{ usluga.work_img.url }}"
+            style="width: 300px;height: 300px; border-radius: 5px"
+            alt="#"/></i><br/><br/><br/>
+    <h3>{{ usluga.work_title }}</h3>
+    <p>{{ usluga.work_text }} </p>
+</div>
+
+{% endblock %}

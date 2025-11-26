@@ -4,7 +4,7 @@ from django.utils.safestring import mark_safe  # Метод, который да
 
 
 class WorkAdmin(admin.ModelAdmin):
-    list_display = ('work_title', 'work_text', 'category', 'work_img')  # какие элементы будут отображаться
+    list_display = ('work_title', 'work_text', 'category', 'get_img')  # какие элементы будут отображаться
     fields = ('work_title', 'work_text', 'category', 'work_img', 'get_img')
     readonly_fields = ('get_img',)
 
@@ -16,3 +16,5 @@ class WorkAdmin(admin.ModelAdmin):
 
 admin.site.register(Work, WorkAdmin)
 admin.site.register(WorkCategory)
+
+

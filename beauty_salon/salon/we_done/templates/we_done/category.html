@@ -1,0 +1,6 @@
+<div class="caty">
+    <button><a class="nav-link" href="{% url 'we_done' %}">Все категории</a></button>
+    {% for cat in cats %}
+        <button><a class="nav-link" href="{% url 'cat' cat.id %}">{{ cat.name }}</a></button>
+    {% endfor %}
+</div>
