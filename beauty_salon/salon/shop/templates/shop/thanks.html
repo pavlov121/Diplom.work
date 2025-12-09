@@ -4,9 +4,29 @@
 {% block content %}
 <!-- end header inner -->
 <!-- end header -->
-<div class="thanks">
-    <h1>Спасибо за ваше сообщение!</h1>
-    <a href="{% url 'index' %}">Вернуться к нам</a>
+<!--<div >-->
+<!--    <h1>Спасибо за ваше сообщение!</h1>-->
+<!--    <a href="{% url 'index' %}">Вернуться к нам</a>-->
+<!--</div>-->
+
+{% load static %}
+{% include 'shop/navbar.html' %}
+<div class="about slin2">
+    <div class="container">
+        <div class="row d_flex">
+            <div class="col-md-6">
+                <div class="titlepage thanks">
+                    <h1><i>Спасибо за ваше сообщение!</i></h1>
+                    <a href="{% url 'index' %}"><i>Вернуться к нам</i></a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about_img">
+                    <figure><img src="{% static 'images/salon!.jpg' %}" alt="#"/></figure>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Javascript files-->

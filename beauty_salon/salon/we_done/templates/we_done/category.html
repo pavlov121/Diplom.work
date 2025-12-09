@@ -1,6 +1,6 @@
-<div class="caty">
-    <button><a class="nav-link" href="{% url 'we_done' %}">Все категории</a></button>
+<div class="caty" style="display: flex; justify-content: space-around; padding: 20px">
+    <button><a class="nav-link" href="{% url 'we_done' %} " style="width: 300px; margin: 20px; border: 2px solid black; border-radius: 3px; background: pink; font-weight: bold; ">Все категории</a></button>
     {% for cat in cats %}
-        <button><a class="nav-link" href="{% url 'cat' cat.id %}">{{ cat.name }}</a></button>
+        <button><a class="nav-link" href="{% url 'cat' cat.id %}" style="width: 300px; margin: 20px; border: 2px solid black; border-radius: 3px; background: pink; font-weight: bold;">{{ cat.name }}</a></button>
     {% endfor %}
 </div>

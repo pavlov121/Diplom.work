@@ -7,25 +7,84 @@
 {% include 'we_done/navbar.html' %}
 
 <div class="back_re">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="title">
-                     <h2><i>{{ usluga.category }}</i></h2>
-                  </div>
-               </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h2><i>{{ usluga.category }}</i></h2>
+                </div>
             </div>
-         </div>
+        </div>
+    </div>
 </div>
-<div>
-    {% include 'we_done/category.html' %}
+
+{% include 'we_done/category.html' %}
+
+<section class="banner_main">
+    <div id="myCarousel" class="carousel slide banner1" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            {% for slide in slider_list %}
+            <div class="carousel-item {{ slide.cms_css }}">
+                <div class="container-fluid">
+                    <div class="carousel-caption relative">
+                        <div class="row d_flex">
+                            <div class="col-md-6">
+                                <img class="bann_img" src="{{ slide.cms_img.url }}"  alt="#"/>
+                            </div>
+                            <div class="col-md-6">
+                                <h1>{{ slide.cms_title }}</h1>
+                                <a class="get_btn" href="Javascript:void(0)" role="button">Записаться на прием</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                <span class="sr-only">Предыдущий</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                <span class="sr-only">Следующий</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="about slin2">
+    <div class="container">
+        <div class="row d_flex">
+            <div class="col-md-6">
+                <div class="titlepage">
+                    <h2>Что это?</h2>
+                    <p><i>{{ usluga.work_title }}</i>{{ usluga.description }} </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about_img">
+                    <figure><img src="{{ usluga.work_img.url }}" alt="#"/></figure>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div>
-    <i><img src="{{ usluga.work_img.url }}"
-            style="width: 300px;height: 300px; border-radius: 5px"
-            alt="#"/></i><br/><br/><br/>
-    <h3>{{ usluga.work_title }}</h3>
-    <p>{{ usluga.work_text }} </p>
-</div>
+
+<!--  footer -->
+{% include 'shop/footer.html' %}
+<!-- end footer -->
+
+<!--<div style="margin: 0 auto; padding: 20px">-->
+<!--    <i><img src="{{ usluga.work_img.url }}"-->
+<!--            style="width: 300px;height: 300px; border-radius: 5px"-->
+<!--            alt="#"/></i><br/><br/><br/>-->
+<!--    <h3>{{ usluga.work_title }}</h3>-->
+<!--    <p>{{ usluga.work_text }} </p>-->
+<!--</div>-->
 
 {% endblock %}

@@ -23,19 +23,27 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10 offset-lg-1 col-md-12">
-                <div class="row">
+                <div class="row" style="display: flex; justify-content: space-around">
                     {% for work in works %}
-                    <div class="col-md-3 col-sm-6">
-                        <div class="we_box">
-                            <a href="{% url 'usluga' work.id %}">
-                                <i><img src="{{ work.work_img.url }}"
-                                        style="width: 1000px;height: 300px; border-radius: 5px"
-                                        alt="#"/></i><br/><br/><br/>
-                            </a>
-<!--                            <h3>{{ work.work_title }}</h3>-->
-<!--                            <p>{{ work.work_text }} </p>-->
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ work.work_img.url }}" class="card-img-top" style="object-fit: contain" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ work.work_title }}</h5>
+                            <p class="card-text">{{ work.work_text }}</p>
+                            <a href="{% url 'usluga' work.id %}" class="btn btn-primary">Перейти</a>
                         </div>
                     </div>
+                    <!--                    <div class="col-md-3 col-sm-6">-->
+                    <!--                        <div class="we_box">-->
+                    <!--                            <a href="{% url 'usluga' work.id %}">-->
+                    <!--                                <i><img src="{{ work.work_img.url }}"-->
+                    <!--                                        style="width: 1000px;height: 300px; border-radius: 5px"-->
+                    <!--                                        alt="#"/></i><br/><br/><br/>-->
+                    <!--                            </a>-->
+                    <!--&lt;!&ndash;                            <h3>{{ work.work_title }}</h3>&ndash;&gt;-->
+                    <!--&lt;!&ndash;                            <p>{{ work.work_text }} </p>&ndash;&gt;-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
                     {% endfor %}
                 </div>
             </div>
@@ -45,66 +53,7 @@
 <!-- end what we do  -->
 
 <!--  footer -->
-<footer>
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <ul class="conta">
-                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> Passages of Lorem Ipsum
-                            available
-                        </li>
-                        <li><i class="fa fa-phone" aria-hidden="true"></i> Call : +012334567890</li>
-                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> demo@gmail.com</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class=" col-md-3 col-sm-6">
-                    <h3>About </h3>
-                    <p class="variat">There are many variations of passages of Lorem Ipsum available, but the
-                        majority
-                        have suffered le</p>
-                </div>
-                <div class=" col-md-3 col-sm-6">
-                    <h3>Nail Salon </h3>
-                    <p class="variat">There are many variations of passages of Lorem Ipsum available, but the
-                        majority
-                        have suffered le</p>
-                </div>
-                <div class="col-md-2 col-sm-6">
-                    <h3>Useful Link</h3>
-                    <ul class="link_menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html"> About</a></li>
-                        <li class="active"><a href="we-do.html">What we do</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <h3>Subscribe</h3>
-                    <form class="bottom_form">
-                        <a class="right_btn" href="Javascript:void(0)"> <i class="fa fa-long-arrow-right"
-                                                                           aria-hidden="true"></i></a>
-                        <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
-                        <p>There are many variations of passages </p>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 offset-md-1">
-                        <p>© 2019 All Rights Reserved. Design by <a href="https://html.design/"> Free Html
-                            Templates</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+{% include 'shop/footer.html' %}
 <!-- end footer -->
 {% endblock %}
 

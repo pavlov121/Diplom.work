@@ -36,6 +36,7 @@
 .thanks{
     font-size: 40px;
     background-image: url('images/salon!.jpg');
+    
 }
 
 .thanks h1{
@@ -83,7 +84,6 @@ h6 {
      color: #111111;
      margin: 0
 }
-
 h1 {
      font-size: 24px;
 }

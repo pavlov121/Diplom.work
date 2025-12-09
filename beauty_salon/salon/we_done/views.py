@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Work, WorkCategory
+from .models import Work, WorkCategory, Slider2
 
 
 def we_done(request, category_id=None):  # Для отображения по категориям
@@ -27,7 +27,8 @@ def usluga(request, pk):
     context = {
         'title': product_obj.category,
         'usluga': product_obj,
-        'cats': WorkCategory.objects.all()
+        'cats': WorkCategory.objects.all(),
+        'slider_list': Slider2.objects.all(),
     }
     return render(request, 'we_done/usluga.html', context)
 
