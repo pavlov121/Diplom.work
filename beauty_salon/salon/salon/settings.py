@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "about.apps.AboutConfig",  # Страница (О нас)
     "we_done.apps.WeDoneConfig",  # Страница (Работы)
     "price_site.apps.PriceSiteConfig",  # Страница (Цены)
+    "contact_site.apps.ContactSiteConfig",  # Страница (для записи на приём/ обращения)
 ]
 
 MIDDLEWARE = [
